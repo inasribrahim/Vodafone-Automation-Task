@@ -21,8 +21,13 @@ Search for Samsung product with click
     Product.Click on samsung with in smart phones deals
 
 Validate Oppo product add to cart
+    Sleep    3s
     Product.Click on Oppo button
     Product.Click on OPPO Smart Phone A98 (5G) in product list
+    Cart.Click on cart button
+    Cart.Validate Product Added To Cart
+
+Click on cart button
     Cart.Click on cart button
     Cart.Validate Product Added To Cart
 
