@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20231204 08:02:21.430" rpa="false" schemaversion="3">
+<suite id="s1" name="Eshop" source="D:\Robot-Framework\robot-framework\tests\eshop.robot">
+<test id="s1-t1" name="Validate that Oppo product should be displayed in cart" line="12">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>30 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20231204 08:02:21.910" endtime="20231204 08:02:21.910"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231204 08:02:21.910" level="INFO">Opening browser 'edge' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20231204 08:02:21.910" endtime="20231204 08:02:24.118"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231204 08:02:24.118" endtime="20231204 08:02:24.239"/>
+</kw>
+<status status="PASS" starttime="20231204 08:02:21.910" endtime="20231204 08:02:24.240"/>
+</kw>
+<kw name="Verify Vodafone Egypt Loaded" library="EShopVodafone">
+<kw name="Load" library="EShopLandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://eshop.vodafone.com.eg/en/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231204 08:02:24.241" level="INFO">Opening url 'https://eshop.vodafone.com.eg/en/'</msg>
+<status status="PASS" starttime="20231204 08:02:24.241" endtime="20231204 08:02:29.327"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231204 08:02:49.328" level="INFO">Slept 20 seconds</msg>
+<status status="PASS" starttime="20231204 08:02:29.327" endtime="20231204 08:02:49.328"/>
+</kw>
+<status status="PASS" starttime="20231204 08:02:24.240" endtime="20231204 08:02:49.328"/>
+</kw>
+<kw name="Accept Cookies" library="EShopLandingPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${ACCEPT_COOKIES_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231204 08:02:49.329" level="INFO">Clicking button 'id=onetrust-accept-btn-handler'.</msg>
+<status status="PASS" starttime="20231204 08:02:49.329" endtime="20231204 08:02:49.537"/>
+</kw>
+<status status="PASS" starttime="20231204 08:02:49.329" endtime="20231204 08:02:49.537"/>
+</kw>
+<kw name="Verify Vodafone Egypt Loaded" library="EShopLandingPage">
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20231204 08:02:49.556" level="INFO">${title} = Vodafone Egypt E-Shop | Online Shopping</msg>
+<status status="PASS" starttime="20231204 08:02:49.537" endtime="20231204 08:02:49.556"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${title}</arg>
+<arg>Vodafone Egypt E-Shop | Online Shopping</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20231204 08:02:49.556" endtime="20231204 08:02:49.558"/>
+</kw>
+<status status="PASS" starttime="20231204 08:02:49.537" endtime="20231204 08:02:49.558"/>
+</kw>
+<kw name="Click On Profile Menu" library="EShopLandingPage">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('vf-user-profile button').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231204 08:02:49.558" level="INFO">Executing JavaScript:
+document.querySelector('vf-user-profile button').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20231204 08:02:49.558" endtime="20231204 08:02:51.027"/>
+</kw>
+<status status="PASS" starttime="20231204 08:02:49.558" endtime="20231204 08:02:51.028"/>
+</kw>
+<status status="PASS" starttime="20231204 08:02:24.240" endtime="20231204 08:02:51.028"/>
+</kw>
+<kw name="Login with valid crdentials" library="EShopVodafone">
+<kw name="Login with Credentials" library="Register">
+<kw name="Fill Msisdn Username" library="Register">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MSISDN_USERNAME_INPUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231204 08:02:51.038" endtime="20231204 08:02:51.295"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${MSISDN_USERNAME_INPUT}</arg>
+<arg>${msisdn}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231204 08:02:51.296" level="INFO">Typing text '01033191978' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20231204 08:02:51.296" endtime="20231204 08:02:51.572"/>
+</kw>
+<status status="PASS" starttime="20231204 08:02:51.038" endtime="20231204 08:02:51.572"/>
+</kw>
+<kw name="Fill Msisdn Password" library="Register">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MSISDN_PASSWORD_INPUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231204 08:02:51.574" endtime="20231204 08:02:51.604"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${MSISDN_PASSWORD_INPUT}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231204 08:02:51.616" level="INFO">Typing text 'P@ssw0rdYV' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20231204 08:02:51.604" endtime="20231204 08:02:51.814"/>
+</kw>
+<status status="PASS" starttime="20231204 08:02:51.573" endtime="20231204 08:02:51.815"/>
+</kw>
+<kw name="Click on Login Button" library="Register">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231204 08:02:51.817" level="INFO">Clicking button 'id=submitBtn'.</msg>
+<status status="PASS" starttime="20231204 08:02:51.816" endtime="20231204 08:02:52.962"/>
+</kw>
+<status status="PASS" starttime="20231204 08:02:51.816" endtime="20231204 08:02:52.962"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231204 08:02:57.963" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231204 08:02:52.962" endtime="20231204 08:02:57.963"/>
+</kw>
+<status status="PASS" starttime="20231204 08:02:51.034" endtime="20231204 08:02:57.963"/>
+</kw>
+<status status="PASS" starttime="20231204 08:02:51.030" endtime="20231204 08:02:57.963"/>
+</kw>
+<kw name="Search for Samsung product with click" library="EShopVodafone">
+<kw name="Enter samsung in search" library="Product">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SEARCH_INPUT}</arg>
+<arg>samsung</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231204 08:02:57.963" level="INFO">Typing text 'samsung' into text field 'id=searchInput'.</msg>
+<status status="PASS" starttime="20231204 08:02:57.963" endtime="20231204 08:02:58.248"/>
+</kw>
+<status status="PASS" starttime="20231204 08:02:57.963" endtime="20231204 08:02:58.248"/>
+</kw>
+<kw name="Click on samsung with in smart phones deals" library="Product">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SEARCH_RESULT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231204 08:02:58.251" endtime="20231204 08:02:58.547"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SEARCH_RESULT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231204 08:02:58.547" level="INFO">Clicking element 'xpath=//p[text()=" In Smart Phones "]'.</msg>
+<status status="PASS" starttime="20231204 08:02:58.547" endtime="20231204 08:02:58.663"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231204 08:03:08.665" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20231204 08:02:58.664" endtime="20231204 08:03:08.665"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.getElementById('searchInput').value = '';</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231204 08:03:08.667" level="INFO">Executing JavaScript:
+document.getElementById('searchInput').value = '';
+Without any arguments.</msg>
+<status status="PASS" starttime="20231204 08:03:08.666" endtime="20231204 08:03:08.686"/>
+</kw>
+<status status="PASS" starttime="20231204 08:02:58.248" endtime="20231204 08:03:08.686"/>
+</kw>
+<kw name="Click on Oppo button" library="Product">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${OPPO_BUTTON}</var>
+<arg>return document.evaluate("//*[contains(text(), 'Oppo')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231204 08:03:08.686" level="INFO">Executing JavaScript:
+return document.evaluate("//*[contains(text(), 'Oppo')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+Without any arguments.</msg>
+<msg timestamp="20231204 08:03:08.700" level="INFO">${OPPO_BUTTON} = &lt;selenium.webdriver.remote.webelement.WebElement (session="4ca5d33e9fb142ccf743046f171fd771", element="AA10CC144592CEE7D3C91AB7B9C82F72_element_150")&gt;</msg>
+<status status="PASS" starttime="20231204 08:03:08.686" endtime="20231204 08:03:08.700"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${OPPO_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231204 08:03:08.700" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="4ca5d33e9fb142ccf743046f171fd771", element="AA10CC144592CEE7D3C91AB7B9C82F72_element_150")&gt;'.</msg>
+<status status="PASS" starttime="20231204 08:03:08.700" endtime="20231204 08:03:08.839"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231204 08:03:18.840" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20231204 08:03:08.839" endtime="20231204 08:03:18.840"/>
+</kw>
+<kw name="Scroll down" library="Product">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollBy(0, 700);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231204 08:03:18.840" level="INFO">Executing JavaScript:
+window.scrollBy(0, 700);
+Without any arguments.</msg>
+<status status="PASS" starttime="20231204 08:03:18.840" endtime="20231204 08:03:18.861"/>
+</kw>
+<status status="PASS" starttime="20231204 08:03:18.840" endtime="20231204 08:03:18.861"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231204 08:03:28.863" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20231204 08:03:18.861" endtime="20231204 08:03:28.863"/>
+</kw>
+<status status="PASS" starttime="20231204 08:03:08.686" endtime="20231204 08:03:28.863"/>
+</kw>
+<kw name="Click on OPPO Smart Phone A98 (5G) in product list" library="Product">
+<kw name="Click on product" library="Product">
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231204 08:03:38.863" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20231204 08:03:28.863" endtime="20231204 08:03:38.863"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[starts-with(text(), " OPPO Smart Phone A98")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231204 08:03:38.863" level="INFO">Clicking element 'xpath=//*[starts-with(text(), " OPPO Smart Phone A98")]'.</msg>
+<status status="PASS" starttime="20231204 08:03:38.863" endtime="20231204 08:03:38.964"/>
+</kw>
+<status status="PASS" starttime="20231204 08:03:28.863" endtime="20231204 08:03:38.964"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231204 08:03:48.965" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20231204 08:03:38.964" endtime="20231204 08:03:48.965"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollBy(0, 300);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231204 08:03:48.965" level="INFO">Executing JavaScript:
+window.scrollBy(0, 300);
+Without any arguments.</msg>
+<status status="PASS" starttime="20231204 08:03:48.965" endtime="20231204 08:03:48.979"/>
+</kw>
+<kw name="Validate Product Colors" library="Product">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231204 08:03:50.983" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231204 08:03:48.979" endtime="20231204 08:03:50.983"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>@{product_colors}</var>
+<arg>css:.color-switcher.color-switcher-mobile button</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20231204 08:03:50.998" level="INFO">@{product_colors} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="4ca5d33e9fb142ccf743046f171fd771", element="AA10CC144592CEE7D3C91AB7B9C82F72_element_171")&gt; | &lt;selenium.webdriver.remote.webelement.WebElem...</msg>
+<status status="PASS" starttime="20231204 08:03:50.984" endtime="20231204 08:03:50.998"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${add_to_product}</var>
+<arg>css:.add-to-cart</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231204 08:03:50.998" level="INFO">${add_to_product} = css:.add-to-cart</msg>
+<status status="PASS" starttime="20231204 08:03:50.998" endtime="20231204 08:03:50.998"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollBy(0, 400);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231204 08:03:51.014" level="INFO">Executing JavaScript:
+window.scrollBy(0, 400);
+Without any arguments.</msg>
+<status status="PASS" starttime="20231204 08:03:51.014" endtime="20231204 08:03:51.033"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>6s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231204 08:03:57.034" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" starttime="20231204 08:03:51.033" endtime="20231204 08:03:57.034"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${script}</var>
+<arg>document.querySelector('.add-to-cart').click()</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231204 08:03:57.034" level="INFO">${script} = document.querySelector('.add-to-cart').click()</msg>
+<status status="PASS" starttime="20231204 08:03:57.034" endtime="20231204 08:03:57.034"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>True</arg>
+<arg>Execute JavaScript</arg>
+<arg>try {${script}} catch(e) {}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>try {${script}} catch(e) {}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231204 08:03:57.034" level="INFO">Executing JavaScript:
+try {document.querySelector('.add-to-cart').click()} catch(e) {}
+Without any arguments.</msg>
+<status status="PASS" starttime="20231204 08:03:57.034" endtime="20231204 08:03:57.094"/>
+</kw>
+<status status="PASS" starttime="20231204 08:03:57.034" endtime="20231204 08:03:57.094"/>
+</kw>
+<status status="PASS" starttime="20231204 08:03:48.979" endtime="20231204 08:03:57.094"/>
+</kw>
+<status status="PASS" starttime="20231204 08:03:28.863" endtime="20231204 08:03:57.094"/>
+</kw>
+<status status="PASS" starttime="20231204 08:02:57.963" endtime="20231204 08:03:57.094"/>
+</kw>
+<kw name="Validate Oppo product add to cart" library="EShopVodafone">
+<kw name="Click on cart button" library="Cart">
+<kw name="Scroll up" library="Product">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, -700);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231204 08:03:57.105" level="INFO">Executing JavaScript:
+window.scrollTo(0, -700);
+Without any arguments.</msg>
+<status status="PASS" starttime="20231204 08:03:57.103" endtime="20231204 08:03:57.115"/>
+</kw>
+<status status="PASS" starttime="20231204 08:03:57.102" endtime="20231204 08:03:57.115"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231204 08:04:02.115" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231204 08:03:57.115" endtime="20231204 08:04:02.115"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('.cart-btn').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231204 08:04:02.115" level="INFO">Executing JavaScript:
+document.querySelector('.cart-btn').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20231204 08:04:02.115" endtime="20231204 08:04:02.147"/>
+</kw>
+<status status="PASS" starttime="20231204 08:03:57.094" endtime="20231204 08:04:02.147"/>
+</kw>
+<kw name="Validate Product Added To Cart" library="Cart">
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231204 08:04:12.148" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20231204 08:04:02.147" endtime="20231204 08:04:12.148"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=//*[starts-with(text(), "OPPO Smart Phone A98")]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20231204 08:04:12.197" level="INFO">Element 'xpath=//*[starts-with(text(), "OPPO Smart Phone A98")]' is displayed.</msg>
+<status status="PASS" starttime="20231204 08:04:12.148" endtime="20231204 08:04:12.197"/>
+</kw>
+<status status="PASS" starttime="20231204 08:04:02.147" endtime="20231204 08:04:12.197"/>
+</kw>
+<status status="PASS" starttime="20231204 08:03:57.094" endtime="20231204 08:04:12.197"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231204 08:04:12.197" endtime="20231204 08:04:14.664"/>
+</kw>
+<status status="PASS" starttime="20231204 08:04:12.197" endtime="20231204 08:04:14.664"/>
+</kw>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20231204 08:02:21.910" endtime="20231204 08:04:14.664"/>
+</test>
+<test id="s1-t2" name="Validate that invalid address should be demeed all buttons" line="19">
+<kw name="Begin Web Test" library="Common" type="SETUP">
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>30 seconds</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20231204 08:04:14.672" endtime="20231204 08:04:14.672"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231204 08:04:14.672" level="INFO">Opening browser 'edge' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20231204 08:04:14.672" endtime="20231204 08:04:16.492"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231204 08:04:16.492" endtime="20231204 08:04:16.615"/>
+</kw>
+<status status="PASS" starttime="20231204 08:04:14.664" endtime="20231204 08:04:16.615"/>
+</kw>
+<kw name="Verify Vodafone Egypt Loaded" library="EShopVodafone">
+<kw name="Load" library="EShopLandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://eshop.vodafone.com.eg/en/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231204 08:04:16.615" level="INFO">Opening url 'https://eshop.vodafone.com.eg/en/'</msg>
+<status status="PASS" starttime="20231204 08:04:16.615" endtime="20231204 08:04:21.430"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231204 08:04:41.432" level="INFO">Slept 20 seconds</msg>
+<status status="PASS" starttime="20231204 08:04:21.430" endtime="20231204 08:04:41.432"/>
+</kw>
+<status status="PASS" starttime="20231204 08:04:16.615" endtime="20231204 08:04:41.432"/>
+</kw>
+<kw name="Accept Cookies" library="EShopLandingPage">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${ACCEPT_COOKIES_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231204 08:04:41.432" level="INFO">Clicking button 'id=onetrust-accept-btn-handler'.</msg>
+<status status="PASS" starttime="20231204 08:04:41.432" endtime="20231204 08:04:41.631"/>
+</kw>
+<status status="PASS" starttime="20231204 08:04:41.432" endtime="20231204 08:04:41.631"/>
+</kw>
+<kw name="Verify Vodafone Egypt Loaded" library="EShopLandingPage">
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20231204 08:04:41.654" level="INFO">${title} = Vodafone Egypt E-Shop | Online Shopping</msg>
+<status status="PASS" starttime="20231204 08:04:41.631" endtime="20231204 08:04:41.654"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${title}</arg>
+<arg>Vodafone Egypt E-Shop | Online Shopping</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20231204 08:04:41.654" endtime="20231204 08:04:41.654"/>
+</kw>
+<status status="PASS" starttime="20231204 08:04:41.631" endtime="20231204 08:04:41.654"/>
+</kw>
+<kw name="Click On Profile Menu" library="EShopLandingPage">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('vf-user-profile button').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231204 08:04:41.654" level="INFO">Executing JavaScript:
+document.querySelector('vf-user-profile button').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20231204 08:04:41.654" endtime="20231204 08:04:44.466"/>
+</kw>
+<status status="PASS" starttime="20231204 08:04:41.654" endtime="20231204 08:04:44.468"/>
+</kw>
+<status status="PASS" starttime="20231204 08:04:16.615" endtime="20231204 08:04:44.469"/>
+</kw>
+<kw name="Login with valid crdentials" library="EShopVodafone">
+<kw name="Login with Credentials" library="Register">
+<kw name="Fill Msisdn Username" library="Register">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MSISDN_USERNAME_INPUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231204 08:04:44.474" endtime="20231204 08:04:44.524"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${MSISDN_USERNAME_INPUT}</arg>
+<arg>${msisdn}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231204 08:04:44.524" level="INFO">Typing text '01033191978' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20231204 08:04:44.524" endtime="20231204 08:04:44.696"/>
+</kw>
+<status status="PASS" starttime="20231204 08:04:44.474" endtime="20231204 08:04:44.697"/>
+</kw>
+<kw name="Fill Msisdn Password" library="Register">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${MSISDN_PASSWORD_INPUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231204 08:04:44.697" endtime="20231204 08:04:44.738"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${MSISDN_PASSWORD_INPUT}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231204 08:04:44.738" level="INFO">Typing text 'P@ssw0rdYV' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20231204 08:04:44.738" endtime="20231204 08:04:44.910"/>
+</kw>
+<status status="PASS" starttime="20231204 08:04:44.697" endtime="20231204 08:04:44.910"/>
+</kw>
+<kw name="Click on Login Button" library="Register">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231204 08:04:44.910" level="INFO">Clicking button 'id=submitBtn'.</msg>
+<status status="PASS" starttime="20231204 08:04:44.910" endtime="20231204 08:04:45.489"/>
+</kw>
+<status status="PASS" starttime="20231204 08:04:44.910" endtime="20231204 08:04:45.489"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231204 08:04:50.489" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231204 08:04:45.489" endtime="20231204 08:04:50.489"/>
+</kw>
+<status status="PASS" starttime="20231204 08:04:44.473" endtime="20231204 08:04:50.489"/>
+</kw>
+<status status="PASS" starttime="20231204 08:04:44.473" endtime="20231204 08:04:50.489"/>
+</kw>
+<kw name="Validate Oppo product add to cart" library="EShopVodafone">
+<kw name="Click on cart button" library="Cart">
+<kw name="Scroll up" library="Product">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0, -700);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231204 08:04:50.489" level="INFO">Executing JavaScript:
+window.scrollTo(0, -700);
+Without any arguments.</msg>
+<status status="PASS" starttime="20231204 08:04:50.489" endtime="20231204 08:04:50.505"/>
+</kw>
+<status status="PASS" starttime="20231204 08:04:50.489" endtime="20231204 08:04:50.505"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231204 08:04:55.505" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231204 08:04:50.505" endtime="20231204 08:04:55.505"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('.cart-btn').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231204 08:04:55.507" level="INFO">Executing JavaScript:
+document.querySelector('.cart-btn').click()
+Without any arguments.</msg>
+<status status="PASS" starttime="20231204 08:04:55.506" endtime="20231204 08:04:55.539"/>
+</kw>
+<status status="PASS" starttime="20231204 08:04:50.489" endtime="20231204 08:04:55.540"/>
+</kw>
+<kw name="Validate Product Added To Cart" library="Cart">
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231204 08:05:05.541" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20231204 08:04:55.540" endtime="20231204 08:05:05.541"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>xpath=//*[starts-with(text(), "OPPO Smart Phone A98")]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20231204 08:05:05.578" level="INFO">Element 'xpath=//*[starts-with(text(), "OPPO Smart Phone A98")]' is displayed.</msg>
+<status status="PASS" starttime="20231204 08:05:05.541" endtime="20231204 08:05:05.578"/>
+</kw>
+<status status="PASS" starttime="20231204 08:04:55.540" endtime="20231204 08:05:05.578"/>
+</kw>
+<status status="PASS" starttime="20231204 08:04:50.489" endtime="20231204 08:05:05.578"/>
+</kw>
+<kw name="Click on checkout button" library="EShopVodafone">
+<kw name="Click on check out button" library="Cart">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CHECK_OUT_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231204 08:05:05.578" endtime="20231204 08:05:05.626"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${CHECK_OUT_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231204 08:05:05.626" level="INFO">Clicking button 'css:.checkout-btn'.</msg>
+<status status="PASS" starttime="20231204 08:05:05.626" endtime="20231204 08:05:05.814"/>
+</kw>
+<status status="PASS" starttime="20231204 08:05:05.578" endtime="20231204 08:05:05.814"/>
+</kw>
+<status status="PASS" starttime="20231204 08:05:05.578" endtime="20231204 08:05:05.814"/>
+</kw>
+<kw name="Click on add address button" library="EShopVodafone">
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231204 08:05:15.814" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20231204 08:05:05.814" endtime="20231204 08:05:15.814"/>
+</kw>
+<kw name="Click on add address button" library="Shipping">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231204 08:05:20.816" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231204 08:05:15.815" endtime="20231204 08:05:20.816"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.querySelector('.add-address').click();</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231204 08:05:20.816" level="INFO">Executing JavaScript:
+document.querySelector('.add-address').click();
+Without any arguments.</msg>
+<status status="PASS" starttime="20231204 08:05:20.816" endtime="20231204 08:05:20.876"/>
+</kw>
+<status status="PASS" starttime="20231204 08:05:15.814" endtime="20231204 08:05:20.876"/>
+</kw>
+<status status="PASS" starttime="20231204 08:05:05.814" endtime="20231204 08:05:20.877"/>
+</kw>
+<kw name="Fill Shipping Information" library="EShopVodafone">
+<kw name="Select City" library="Shipping">
+<kw name="Set Variable" library="BuiltIn">
+<var>${city_selector}</var>
+<arg>xpath=//select[@formcontrolname='city']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231204 08:05:20.878" level="INFO">${city_selector} = xpath=//select[@formcontrolname='city']</msg>
+<status status="PASS" starttime="20231204 08:05:20.878" endtime="20231204 08:05:20.878"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${visible_text}</var>
+<arg>Cairo</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231204 08:05:20.878" level="INFO">${visible_text} = Cairo</msg>
+<status status="PASS" starttime="20231204 08:05:20.878" endtime="20231204 08:05:20.878"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${city_selector}</arg>
+<arg>${visible_text}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20231204 08:05:20.878" level="INFO">Selecting options from selection list 'xpath=//select[@formcontrolname='city']' by label Cairo.</msg>
+<status status="PASS" starttime="20231204 08:05:20.878" endtime="20231204 08:05:21.029"/>
+</kw>
+<status status="PASS" starttime="20231204 08:05:20.878" endtime="20231204 08:05:21.029"/>
+</kw>
+<kw name="Select District" library="Shipping">
+<kw name="Set Variable" library="BuiltIn">
+<var>${district_selector}</var>
+<arg>xpath=//select[@formcontrolname='district']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231204 08:05:21.029" level="INFO">${district_selector} = xpath=//select[@formcontrolname='district']</msg>
+<status status="PASS" starttime="20231204 08:05:21.029" endtime="20231204 08:05:21.029"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${visible_text}</var>
+<arg>El Zaytoun</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231204 08:05:21.029" level="INFO">${visible_text} = El Zaytoun</msg>
+<status status="PASS" starttime="20231204 08:05:21.029" endtime="20231204 08:05:21.029"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${district_selector}</arg>
+<arg>${visible_text}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20231204 08:05:21.029" level="INFO">Selecting options from selection list 'xpath=//select[@formcontrolname='district']' by label El Zaytoun.</msg>
+<status status="PASS" starttime="20231204 08:05:21.029" endtime="20231204 08:05:21.165"/>
+</kw>
+<status status="PASS" starttime="20231204 08:05:21.029" endtime="20231204 08:05:21.165"/>
+</kw>
+<kw name="Enter Street Name" library="Shipping">
+<kw name="Set Variable" library="BuiltIn">
+<var>${streetname_selector}</var>
+<arg>xpath=//input[@formcontrolname='streetName']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231204 08:05:21.165" level="INFO">${streetname_selector} = xpath=//input[@formcontrolname='streetName']</msg>
+<status status="PASS" starttime="20231204 08:05:21.165" endtime="20231204 08:05:21.165"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${streetname_selector}</arg>
+<arg>5 street mohammed badr</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231204 08:05:21.165" level="INFO">Typing text '5 street mohammed badr' into text field 'xpath=//input[@formcontrolname='streetName']'.</msg>
+<status status="PASS" starttime="20231204 08:05:21.165" endtime="20231204 08:05:21.392"/>
+</kw>
+<status status="PASS" starttime="20231204 08:05:21.165" endtime="20231204 08:05:21.392"/>
+</kw>
+<kw name="Enter Building Number" library="Shipping">
+<kw name="Set Variable" library="BuiltIn">
+<var>${buildingNo_selector}</var>
+<arg>xpath=//input[@formcontrolname='buildingNo']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231204 08:05:21.393" level="INFO">${buildingNo_selector} = xpath=//input[@formcontrolname='buildingNo']</msg>
+<status status="PASS" starttime="20231204 08:05:21.393" endtime="20231204 08:05:21.393"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${buildingNo_selector}</arg>
+<arg>Wrong Information</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231204 08:05:21.393" level="INFO">Typing text 'Wrong Information' into text field 'xpath=//input[@formcontrolname='buildingNo']'.</msg>
+<status status="PASS" starttime="20231204 08:05:21.393" endtime="20231204 08:05:21.563"/>
+</kw>
+<status status="PASS" starttime="20231204 08:05:21.393" endtime="20231204 08:05:21.563"/>
+</kw>
+<kw name="Enter Floor Number" library="Shipping">
+<kw name="Set Variable" library="BuiltIn">
+<var>${floorNo_selector}</var>
+<arg>xpath=//input[@formcontrolname='floorNo']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231204 08:05:21.567" level="INFO">${floorNo_selector} = xpath=//input[@formcontrolname='floorNo']</msg>
+<status status="PASS" starttime="20231204 08:05:21.563" endtime="20231204 08:05:21.567"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${floorNo_selector}</arg>
+<arg>Wrong Information</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231204 08:05:21.568" level="INFO">Typing text 'Wrong Information' into text field 'xpath=//input[@formcontrolname='floorNo']'.</msg>
+<status status="PASS" starttime="20231204 08:05:21.568" endtime="20231204 08:05:21.724"/>
+</kw>
+<status status="PASS" starttime="20231204 08:05:21.563" endtime="20231204 08:05:21.724"/>
+</kw>
+<kw name="Enter Department Number" library="Shipping">
+<kw name="Set Variable" library="BuiltIn">
+<var>${appartmentNo_selector}</var>
+<arg>xpath=//input[@formcontrolname='appartmentNo']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231204 08:05:21.725" level="INFO">${appartmentNo_selector} = xpath=//input[@formcontrolname='appartmentNo']</msg>
+<status status="PASS" starttime="20231204 08:05:21.725" endtime="20231204 08:05:21.725"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${appartmentNo_selector}</arg>
+<arg>Wrong Information</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231204 08:05:21.726" level="INFO">Typing text 'Wrong Information' into text field 'xpath=//input[@formcontrolname='appartmentNo']'.</msg>
+<status status="PASS" starttime="20231204 08:05:21.725" endtime="20231204 08:05:21.891"/>
+</kw>
+<status status="PASS" starttime="20231204 08:05:21.724" endtime="20231204 08:05:21.891"/>
+</kw>
+<status status="PASS" starttime="20231204 08:05:20.877" endtime="20231204 08:05:21.891"/>
+</kw>
+<kw name="Validate Error message displayed and Save address button is dimmed" library="EShopVodafone">
+<kw name="Validate Error message displayed and Save address button is dimmed" library="Shipping">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231204 08:05:26.893" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231204 08:05:21.893" endtime="20231204 08:05:26.893"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>css:.error</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20231204 08:05:26.938" level="INFO">Element 'css:.error' is displayed.</msg>
+<status status="PASS" starttime="20231204 08:05:26.893" endtime="20231204 08:05:26.938"/>
+</kw>
+<kw name="Scroll down" library="Shipping">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollBy(0, 400);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231204 08:05:26.938" level="INFO">Executing JavaScript:
+window.scrollBy(0, 400);
+Without any arguments.</msg>
+<status status="PASS" starttime="20231204 08:05:26.938" endtime="20231204 08:05:26.950"/>
+</kw>
+<status status="PASS" starttime="20231204 08:05:26.938" endtime="20231204 08:05:26.950"/>
+</kw>
+<kw name="Element Should Be Disabled" library="SeleniumLibrary">
+<arg>${SAVE_BUTTON}</arg>
+<doc>Verifies that element identified by ``locator`` is disabled.</doc>
+<status status="PASS" starttime="20231204 08:05:26.950" endtime="20231204 08:05:26.992"/>
+</kw>
+<status status="PASS" starttime="20231204 08:05:21.892" endtime="20231204 08:05:26.992"/>
+</kw>
+<status status="PASS" starttime="20231204 08:05:21.892" endtime="20231204 08:05:26.993"/>
+</kw>
+<kw name="End Web Test" library="Common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231204 08:05:26.995" endtime="20231204 08:05:29.407"/>
+</kw>
+<status status="PASS" starttime="20231204 08:05:26.994" endtime="20231204 08:05:29.407"/>
+</kw>
+<tag>Smoke</tag>
+<status status="PASS" starttime="20231204 08:04:14.664" endtime="20231204 08:05:29.407"/>
+</test>
+<status status="PASS" starttime="20231204 08:02:21.430" endtime="20231204 08:05:29.407"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Eshop">Eshop</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
