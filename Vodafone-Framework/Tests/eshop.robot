@@ -18,7 +18,7 @@ Validate that Oppo product should be displayed in cart
 
 Validate that invalid address should be demeed all buttons
     [Tags]  Smoke
-    EShopVodafone.Verify Vodafone Egypt Loaded
+    EShopVodafone.Verify vodafone egypt loaded and click on profile
     EShopVodafone.Login with valid crdentials
     EShopVodafone.Validate Oppo product add to cart
     EShopVodafone.Click on checkout button

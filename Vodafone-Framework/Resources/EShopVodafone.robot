@@ -19,10 +19,10 @@ Login with valid crdentials
 Search for Samsung product with click
     Product.Enter samsung in search
     Product.Click on samsung with in smart phones deals
-    Product.Click on Oppo button
-    Product.Click on OPPO Smart Phone A98 (5G) in product list
 
 Validate Oppo product add to cart
+    Product.Click on Oppo button
+    Product.Click on OPPO Smart Phone A98 (5G) in product list
     Cart.Click on cart button
     Cart.Validate Product Added To Cart
 
