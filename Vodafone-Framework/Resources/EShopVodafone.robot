@@ -7,7 +7,7 @@ Resource  ../Resources/PO/Shipping.robot
 
 
 *** Keywords ***
-Verify Vodafone Egypt Loaded
+Verify vodafone egypt loaded and click on profile
     EShopLandingPage.Load
     EShopLandingPage.Accept Cookies
     EShopLandingPage.Verify Vodafone Egypt Loaded

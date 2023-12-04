@@ -11,7 +11,7 @@ ${BROWSER}  edge
 *** Test Cases ***
 Validate that Oppo product should be displayed in cart
     [Tags]  Smoke
-    EShopVodafone.Verify Vodafone Egypt Loaded
+    EShopVodafone.Verify vodafone egypt loaded and click on profile
     EShopVodafone.Login with valid crdentials
     EShopVodafone.Search for Samsung product with click
     EShopVodafone.Validate Oppo product add to cart
