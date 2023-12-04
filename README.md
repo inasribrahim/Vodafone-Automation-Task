@@ -23,6 +23,6 @@ We are implementing the **Object Model** design pattern (**Page Object Model** f
 3. Activate a virtual environment in power shell mode .\myenv\Scripts\Activate
  
 ## Execution:
-* Navigate to E-Shop project directory  ```robot -d results ../tests/eshop.robot```
+* Navigate to E-Shop project directory  ```robot -d results tests/eshop.robot```
 * Navigate to Reqres project directory  ```robot -d results tests/Reqres.robot```
 * We can perform **Parallel Execution** with the ```pabot``` instead of ```robot``` command like this: ```pabot -d Results Tests```
