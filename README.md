@@ -16,6 +16,8 @@ We are implementing the **Object Model** design pattern (**Page Object Model** f
 5. Install [**Requests library**](https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html): ```pip install robotframework-requests```
 6. Install [**JSON Library**](https://robotframework-thailand.github.io/robotframework-jsonlibrary/JSONLibrary.html): ```pip install robotframework-jsonlibrary```
 7. Install [**Pabot**](https://pabot.org/) to be able to perform **Parallel execution** when needed: ```pip install -U robotframework-pabot```
+8. Install [**Allure Report**](https://pypi.org/project/allure-robotframework/) to be able to generate **Allure Report** ``` pip install allure-robotframework ```
+9. Install [**Allure Report Compile**](https://pypi.org/project/allure-robotframework/) to be able to compile into one source **Allure Report html** ``` pip install allure-combine ```
 
 ## Create a Virtual Environment:
 1. Navigate to Automation Framework Task Directory
@@ -26,3 +28,6 @@ We are implementing the **Object Model** design pattern (**Page Object Model** f
 * Navigate to E-Shop project directory  ```robot -d results tests/eshop.robot```
 * Navigate to Reqres project directory  ```robot -d results tests/Reqres.robot```
 * We can perform **Parallel Execution** with the ```pabot``` instead of ```robot``` command like this: ```pabot -d Results Tests```
+* we can perform **Allure Listeners** to generate report ```robot  --listener allure_robotframework tests/eshop```
+    * Generate allure-results ``` allure generate results```
+    * Compile all generated file to one source html ``` allure-combine . ```
