@@ -1,0 +1,7 @@
+robotframework
+robotframework-browser
+robotframework-requests
+robotframework-jsonlibrary
+robotframework-pabot
+allure-robotframework
+allure-combine
