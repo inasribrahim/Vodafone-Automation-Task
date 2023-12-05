@@ -11,13 +11,14 @@ We are implementing the **Object Model** design pattern (**Page Object Model** f
 ## Setup:
 1. Install [**Python™**](https://www.python.org/downloads/)
 2. Install [**Node.js®**](https://nodejs.org/en/download/)
-3. Open a terminal/commandline windows and **Install Robot Framework** from PyPi with pip: ```pip install robotframework```
-4. Install [**Browser Library**](https://marketsquare.github.io/robotframework-browser/Browser.html): ```pip install robotframework-browser``` then initialize it: ```rfbrowser init```. If rfbrowser is not found/installed for any reason, try ```python -m Browser.entry init``` 
-5. Install [**Requests library**](https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html): ```pip install robotframework-requests```
-6. Install [**JSON Library**](https://robotframework-thailand.github.io/robotframework-jsonlibrary/JSONLibrary.html): ```pip install robotframework-jsonlibrary```
-7. Install [**Pabot**](https://pabot.org/) to be able to perform **Parallel execution** when needed: ```pip install -U robotframework-pabot```
-8. Install [**Allure Report**](https://pypi.org/project/allure-robotframework/) to be able to generate **Allure Report** ``` pip install allure-robotframework ```
-9. Install [**Allure Report Compile**](https://pypi.org/project/allure-robotframework/) to be able to compile into one source **Allure Report html** ``` pip install allure-combine ```
+4. Open a terminal/commandline windows and **Install Robot Framework** from PyPi with pip: ```pip install robotframework```
+5. Install [**Browser Library**](https://marketsquare.github.io/robotframework-browser/Browser.html): ```pip install robotframework-browser``` then initialize it: ```rfbrowser init```. If rfbrowser is not found/installed for any reason, try ```python -m Browser.entry init``` 
+6. Install [**Requests library**](https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html): ```pip install robotframework-requests```
+7. Install [**JSON Library**](https://robotframework-thailand.github.io/robotframework-jsonlibrary/JSONLibrary.html): ```pip install robotframework-jsonlibrary```
+8. Install [**Pabot**](https://pabot.org/) to be able to perform **Parallel execution** when needed: ```pip install -U robotframework-pabot```
+9. Install [**Allure Report**](https://pypi.org/project/allure-robotframework/) to be able to generate **Allure Report** ``` pip install allure-robotframework ```
+10. Install [**Allure Report Compile**](https://pypi.org/project/allure-robotframework/) to be able to compile into one source **Allure Report html** ``` pip install allure-combine ```
+11. **if you need to install all pacakage in single file using command** ``` pip install -r requirements.txt ```
 
 ## Create a Virtual Environment:
 1. Navigate to Automation Framework Task Directory
