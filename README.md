@@ -27,7 +27,7 @@ We are implementing the **Object Model** design pattern (**Page Object Model** f
 ## Execution:
 * Navigate to E-Shop project directory  ```robot -d results tests/eshop.robot```
 * Navigate to Reqres project directory  ```robot -d results tests/Reqres.robot```
-* We can perform **Parallel Execution** with the ```pabot``` instead of ```robot``` command like this: ```pabot -d Results Tests```
+* We can perform **Parallel Execution** with the ```pabot``` instead of ```robot``` command like this: ``` pabot  --testlevelsplit --listener allure_robotframework tests/eshop.robot```
 * we can perform **Allure Listeners** to generate report ```robot  --listener allure_robotframework tests/eshop```
-    * Generate allure-results ``` allure generate results```
+    * Generate allure-results ``` allure generate allure-results```
     * Compile all generated file to one source html ``` allure-combine . ```
